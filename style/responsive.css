@@ -1,0 +1,31 @@
+@media screen and (max-width: 720px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filme-principal .container {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  .filme-principal .botao-primario {
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .filme-principal .botao-secundario {
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .carrosel .carrosel-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .descricao {
+    width: 50%;
+  }
+}

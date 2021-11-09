@@ -1,0 +1,178 @@
+/* variáveis */
+:root {
+  --vermelho: #e50914;
+  --vermelho-escuro: #e50914be;
+  --preta: #141414;
+
+  --fonte-principal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --fonte-secundaria: "Playfair Display", serif;
+}
+
+/* resetar tudo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* elemento base */
+body {
+  background: var(--preta);
+  font-family: var(--fonte-secundaria);
+  color: #fff;
+  font-size: 16px;
+}
+
+/* header */
+header {
+  padding: 8px 16px;
+  background-color: var(--preta);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  color: var(--vermelho);
+  font-family: var(--fonte-principal);
+}
+
+header nav a {
+  text-decoration: none;
+  color: #ddd;
+  margin-right: 8px;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+/* filme principal */
+.filme-principal {
+  font-size: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1) 100%),
+    url("/img/capa-house.jpg");
+
+  min-height: 400px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.filme-principal .container {
+  margin-left: 16px;
+  width: 70%;
+}
+
+.filme-principal .titulo {
+  font-size: 3rem;
+  font-family: var(--fonte-principal);
+  margin-bottom: 8px;
+}
+
+.filme-principal .descricao {
+  line-height: 150%;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+/* botão primário */
+.filme-principal .botao-primario {
+  background-color: var(--vermelho);
+  border: none;
+  color: #fff;
+
+  padding: 16px 32px;
+  font-size: 1rem;
+  margin-right: 8px;
+
+  cursor: pointer;
+  transition: 0.1s ease-in-out all;
+}
+
+.filme-principal .botao-primario:hover {
+  transform: translateY(-4px);
+  background-color: var(--vermelho-escuro);
+}
+
+.filme-principal .botao-primario:active {
+  transform: translateY(4px);
+}
+
+/* botão secundário */
+.filme-principal .botao-secundario {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+
+  padding: 16px 32px;
+  font-size: 1rem;
+  margin-right: 8px;
+
+  cursor: pointer;
+  transition: 0.1s ease-in-out all;
+}
+
+.filme-principal .botao-secundario:hover {
+  transform: translateY(-4px);
+  background-color: white;
+  color: black;
+}
+
+.filme-principal .botao-secundario:active {
+  transform: translateY(4px);
+}
+
+/* ícones do botões */
+.filme-principal .botao-primario i {
+  margin-right: 8px;
+}
+
+.filme-principal .botao-secundario i {
+  margin-right: 8px;
+}
+
+/* carrosel */
+.carrosel {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+}
+
+.carrosel .container {
+  margin-left: 16px;
+}
+
+.carrosel .carrosel-title {
+  margin-bottom: 8px;
+}
+
+.carrosel .item {
+  height: 100%;
+  width: 100%;
+  display: block;
+
+  border-top: 6px solid transparent;
+
+  transition: 0.05s ease-in-out all;
+}
+
+.carrosel .item:hover {
+  border-top: 6px solid var(--vermelho);
+}
+
+.carrosel .item:active {
+  filter: opacity(75%);
+}
